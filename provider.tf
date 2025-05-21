@@ -3,13 +3,12 @@ terraform {
     organization = "terraform_pr_mehnat"
 
     workspaces {
-      name = "terraform-cloud"
+      name = "test"
     }
   }
 }
 
-
 provider "aws" {
-  region     = var.region
+  region     = "ap-south-1"
 }
 
