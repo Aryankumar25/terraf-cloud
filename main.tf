@@ -13,7 +13,7 @@ resource "aws_vpc" "main" {
 resource "aws_subnet" "main" {
   vpc_id                  = aws_vpc.main.id
   cidr_block              = "10.${terraform.workspace == "dev" ? 1 : terraform.workspace == "test" ? 2 : 3}.0.0/24" # ✅ Replaced address_prefixes
-  availability_zone       = "us-east-1a"
+  availability_zone       = "ap-south-1a"
   map_public_ip_on_launch = true # optional: assign public IPs automatically
 
   tags = {
